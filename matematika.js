@@ -57,16 +57,32 @@ function generateQuestion(kesulitan) {
       jawab: 100,
     },
     {
-      soal: "987 + 113 - 1000 +50?",
-      jawab: 150,
-    },
-    {
       soal: "6 , 7 , 8 , 10 , 12 , 15 , 18 , 22 , .... ",
       jawab: 24,
     },
     {
       soal: "4, 12, 28, 60, 124, 252, … ",
       jawab: 508,
+    },
+    {
+      soal: "0,6+0,06+0,006+0,0006+... = X, jika X dikali 3, berapakah X?",
+      jawab: 2,
+    },
+    {
+      soal: "2021x2021-2020x2020=",
+      jawab: 4041,
+    },
+    {
+      soal: "Jika 5<=X<=10 dan 2<=Y<=6, berapa nilai minimum (X-Y)(X+Y)?",
+      jawab: -11,
+    },
+    {
+      soal: "jika panjang diagonal persegi adalah 4, maka luas persegi itu adalah...",
+      jawab: 8,
+    },
+    {
+      soal: "1+2+3+4+5+6+7+...+19=",
+      jawab: 190,
     },
     {
       soal: "Sebuah bejana berbentuk silinder berisi air 1/3 ya. Jika kemudian ditambah air sebanyak 3 liter lagi, bejana ini akan berisi kira-kira ½ nya. Berapa literkah kapasitas bejana itu? ",
@@ -82,11 +98,11 @@ function generateQuestion(kesulitan) {
     },
   ];
   const questions2 = [
-    { soal: "14+1:", jawab: 15 },
-    { soal: "14+21:", jawab: 35 },
-    { soal: "24+26:", jawab: 50 },
-    { soal: "41+45:", jawab: 86 },
-    { soal: "14+17:", jawab: 31 },
+    { soal: "14+61:", jawab: 75 },
+    { soal: "114+201:", jawab: 315 },
+    { soal: "124+26:", jawab: 150 },
+    { soal: "41+245:", jawab: 286 },
+    { soal: "214+117:", jawab: 331 },
     { soal: "1 + 1 x 0:", jawab: 1 },
     { soal: "17x3:", jawab: 51 },
     { soal: "23x6:", jawab: 138 },
@@ -100,6 +116,20 @@ function generateQuestion(kesulitan) {
     { soal: "41+63:", jawab: 104 },
     { soal: "15x3:", jawab: 45 },
     { soal: "56+13:", jawab: 69 },
+    { soal: "56+13:", jawab: 69 },
+    { soal: "516+114:", jawab: 630 },
+    { soal: "136+13:", jawab: 149 },
+    { soal: "7x13:", jawab: 91 },
+    { soal: "21x9:", jawab: 189 },
+    { soal: "33x4:", jawab: 132 },
+    { soal: "12x12:", jawab: 144 },
+    { soal: "10+4x2:", jawab: 18 },
+    { soal: "2x3+4x2:", jawab: 14 },
+    { soal: "3x(5+2):", jawab: 21 },
+    { soal: "144/(3*4):", jawab: 12 },
+    { soal: "81/3:", jawab: 27 },
+    { soal: "126/6:", jawab: 21 },
+    { soal: "987 + 113 - 1000:", jawab: 100 },
   ];
 
   if (kesulitan == 1) {
@@ -122,11 +152,15 @@ function generateQuestion(kesulitan) {
 }
 //question = { soal: "14+1:", jawab: 15 }
 //jawab = angka
+let highScore = 0;
 let question = generateQuestion(kesulitan);
 let life = 3;
 let username = sessionStorage.getItem("username");
 let divLife = document.getElementById("life");
 let anakLife = document.createElement("i");
+let highSpan = document.getElementById("highSpan");
+let highUser = document.getElementById("highUser");
+
 function lifeCount(life) {
   if (life === 0) {
     return life;
@@ -139,6 +173,33 @@ function lifeCount(life) {
 }
 
 anakLife.innerText = lifeCount(life);
+
+if (
+  sessionStorage.getItem("highScore1") &&
+  sessionStorage.getItem("highUser1") &&
+  kesulitan == 1
+) {
+  highSpan.innerText = sessionStorage.getItem("highScore1");
+  highUser.innerText = sessionStorage.getItem("highUser1").toUpperCase();
+} else if (
+  sessionStorage.getItem("highScore2") &&
+  sessionStorage.getItem("highUser2") &&
+  kesulitan == 2
+) {
+  highSpan.innerText = sessionStorage.getItem("highScore2");
+  highUser.innerText = sessionStorage.getItem("highUser2").toUpperCase();
+} else if (
+  sessionStorage.getItem("highScore3") &&
+  sessionStorage.getItem("highUser3") &&
+  kesulitan == 3
+) {
+  highSpan.innerText = sessionStorage.getItem("highScore3");
+  highUser.innerText = sessionStorage.getItem("highUser3").toUpperCase();
+} else {
+  highSpan.innerText = 0;
+  highUser.innerText = "Unknown";
+}
+
 anakLife.className = "material-icons";
 let temp = anakLife.cloneNode(true);
 divLife.appendChild(anakLife);
@@ -196,6 +257,23 @@ function menjawab(e) {
         }
         
         modal.style.display = "block";
+        if (score > highScore) {
+          if (kesulitan == 1) {
+            sessionStorage.setItem("highScore1", score);
+            sessionStorage.setItem("highUser1", username);
+            highScore = score;
+          }
+          if (kesulitan == 2) {
+            sessionStorage.setItem("highScore2", score);
+            sessionStorage.setItem("highUser2", username);
+            highScore = score;
+          }
+          if (kesulitan == 3) {
+            sessionStorage.setItem("highScore3", score);
+            sessionStorage.setItem("highUser3", username);
+            highScore = score;
+          }
+        }
       }
     }
     document.getElementById("life").innerText = lifeCount(life);
