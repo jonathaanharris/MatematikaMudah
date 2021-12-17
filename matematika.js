@@ -218,7 +218,14 @@ function menjawab(e) {
         life--;
         document.querySelector("#user-answer").disabled = true;
         document.querySelector("#btnSub").disabled = true;
-        dialogue.innerText = `ANDA KALAH, SCORE ANDA ${score}`;
+        if(score >= 100) {
+          dialogue.innerText = `SELAMAT Anda sangat cerdas! skor Anda ${score}`;
+        } else if (score > 70) {
+          dialogue.innerText = `NICE, Skor Anda ${score}`;
+        } else {
+          dialogue.innerText = `Yahh.. skor Anda hanya ${score}`;
+        }
+        
         modal.style.display = "block";
         if (score > highScore) {
           if (kesulitan == 1) {
