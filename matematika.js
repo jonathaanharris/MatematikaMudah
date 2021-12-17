@@ -4,9 +4,10 @@ if (
 ) {
   window.location.href = "./login.html";
 }
-
-function generateQuestion() {
-  const questions = [
+let kesulitan = sessionStorage.getItem("valueLevel");
+function generateQuestion(kesulitan) {
+  console.log(kesulitan);
+  const questions1 = [
     {
       soal: "jika 3 ekor kambing memakan 3 lapangan rumput menghabiskan waktu selama 3 hari, berapa hari yang dibutuhkan 5 kambing memakan 5 lapangan rumput?",
       jawab: 3,
@@ -81,13 +82,36 @@ function generateQuestion() {
       jawab: 40,
     },
   ];
-  let index = Math.floor(Math.random() * questions.length);
-  return questions[index];
+  const questions2 = [
+    { soal: "14+1:", jawab: 15 },
+    { soal: "14+21:", jawab: 35 },
+    { soal: "24+26:", jawab: 50 },
+    { soal: "41+45:", jawab: 86 },
+    { soal: "14+17:", jawab: 31 },
+  ];
+  const questions3 = [
+    { soal: "1+1=", jawab: 2 },
+    { soal: "1+2:", jawab: 3 },
+    { soal: "2+3:", jawab: 5 },
+  ];
+
+  if (kesulitan == 1) {
+    let index = Math.floor(Math.random() * questions1.length);
+    return questions1[index];
+  }
+  if (kesulitan == 2) {
+    let index = Math.floor(Math.random() * questions2.length);
+    return questions2[index];
+  }
+  if (kesulitan == 3) {
+    let index = Math.floor(Math.random() * questions3.length);
+    return questions3[index];
+  }
 }
 //question = { soal: "14+1:", jawab: 15 }
 //jawab = angka
-let question = generateQuestion();
-let life = sessionStorage.getItem("valueLevel");
+let question = generateQuestion(kesulitan);
+let life = 3;
 let username = sessionStorage.getItem("username");
 let divLife = document.getElementById("life");
 let anakLife = document.createElement("i");
@@ -126,11 +150,11 @@ function menjawab(e) {
     question.jawab == userAnswer ? (benar = true) : (benar = false);
     if (benar) {
       score += 10;
-      let question2 = generateQuestion();
+      let question2 = generateQuestion(kesulitan);
       if (question.soal == question2.soal) {
         let same = true;
         while (same) {
-          question2 = generateQuestion();
+          question2 = generateQuestion(kesulitan);
           if (question.soal !== question2.soal) {
             console.log(question, question2);
             break;
@@ -164,7 +188,7 @@ function reset() {
   document.querySelector("#user-answer").disabled = false;
   document.querySelector("#btnSub").disabled = false;
   score = 0;
-  life = Number(sessionStorage.getItem("valueLevel"));
+  life = 3;
   document.getElementById("life").innerText = lifeCount(life);
   document.getElementById("score").innerText = score;
 }
