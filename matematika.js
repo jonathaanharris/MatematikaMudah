@@ -57,10 +57,6 @@ function generateQuestion(kesulitan) {
       jawab: 100,
     },
     {
-      soal: "987 + 113 - 1000 +50?",
-      jawab: 150,
-    },
-    {
       soal: "6 , 7 , 8 , 10 , 12 , 15 , 18 , 22 , .... ",
       jawab: 24,
     },
@@ -75,6 +71,14 @@ function generateQuestion(kesulitan) {
     {
       soal: "2021x2021-2020x2020=",
       jawab: 4041,
+    },
+    {
+      soal: "Jika 5<=X<=10 dan 2<=Y<=6, berapa nilai minimum (X-Y)(X+Y)?",
+      jawab: -11,
+    },
+    {
+      soal: "jika panjang diagonal persegi adalah 4, maka luas persegi itu adalah...",
+      jawab: 8,
     },
     {
       soal: "1+2+3+4+5+6+7+...+19=",
@@ -112,6 +116,20 @@ function generateQuestion(kesulitan) {
     { soal: "41+63:", jawab: 104 },
     { soal: "15x3:", jawab: 45 },
     { soal: "56+13:", jawab: 69 },
+    { soal: "56+13:", jawab: 69 },
+    { soal: "516+114:", jawab: 630 },
+    { soal: "136+13:", jawab: 149 },
+    { soal: "7x13:", jawab: 91 },
+    { soal: "21x9:", jawab: 189 },
+    { soal: "33x4:", jawab: 132 },
+    { soal: "12x12:", jawab: 144 },
+    { soal: "10+4x2:", jawab: 18 },
+    { soal: "2x3+4x2:", jawab: 14 },
+    { soal: "3x(5+2):", jawab: 21 },
+    { soal: "144/(3*4):", jawab: 12 },
+    { soal: "81/3:", jawab: 27 },
+    { soal: "126/6:", jawab: 21 },
+    { soal: "987 + 113 - 1000:", jawab: 100 },
   ];
 
   if (kesulitan == 1) {
