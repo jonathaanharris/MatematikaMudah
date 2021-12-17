@@ -150,21 +150,21 @@ if (
   kesulitan == 1
 ) {
   highSpan.innerText = sessionStorage.getItem("highScore1");
-  highUser.innerText = sessionStorage.getItem("highScore1");
+  highUser.innerText = sessionStorage.getItem("highUser1").toUpperCase();
 } else if (
   sessionStorage.getItem("highScore2") &&
   sessionStorage.getItem("highUser2") &&
   kesulitan == 2
 ) {
   highSpan.innerText = sessionStorage.getItem("highScore2");
-  highUser.innerText = sessionStorage.getItem("highUser2");
+  highUser.innerText = sessionStorage.getItem("highUser2").toUpperCase();
 } else if (
   sessionStorage.getItem("highScore3") &&
   sessionStorage.getItem("highUser3") &&
   kesulitan == 3
 ) {
   highSpan.innerText = sessionStorage.getItem("highScore3");
-  highUser.innerText = sessionStorage.getItem("highUser3");
+  highUser.innerText = sessionStorage.getItem("highUser3").toUpperCase();
 } else {
   highSpan.innerText = 0;
   highUser.innerText = "Unknown";
