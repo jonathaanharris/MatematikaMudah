@@ -69,6 +69,18 @@ function generateQuestion(kesulitan) {
       jawab: 508,
     },
     {
+      soal: "0,6+0,06+0,006+0,0006+... = X, jika X dikali 3, berapakah X?",
+      jawab: 2,
+    },
+    {
+      soal: "2021x2021-2020x2020=",
+      jawab: 4041,
+    },
+    {
+      soal: "1+2+3+4+5+6+7+...+19=",
+      jawab: 190,
+    },
+    {
       soal: "Sebuah bejana berbentuk silinder berisi air 1/3 ya. Jika kemudian ditambah air sebanyak 3 liter lagi, bejana ini akan berisi kira-kira ½ nya. Berapa literkah kapasitas bejana itu? ",
       jawab: 18,
     },
