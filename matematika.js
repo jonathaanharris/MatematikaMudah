@@ -25,7 +25,6 @@ function generateQuestion(kesulitan) {
       jawab: 6,
     },
     { soal: "(15-(-4)-n) = 10. Nilai dari n adalah", jawab: 9 },
-    { soal: "1 + 1 x 0 = ...", jawab: 1 },
     {
       soal: "Seorang pedagang membeli beras 120 karung. Setiap karung berisi 20 kg. Beras tersebut terjual 1987 kg. Untuk menambah persediaan, pedagang membeli lagi 1000 kg. Beras pedagang tersebut sekarang ada ...",
       jawab: 1413,
@@ -88,11 +87,19 @@ function generateQuestion(kesulitan) {
     { soal: "24+26:", jawab: 50 },
     { soal: "41+45:", jawab: 86 },
     { soal: "14+17:", jawab: 31 },
-  ];
-  const questions3 = [
-    { soal: "1+1=", jawab: 2 },
-    { soal: "1+2:", jawab: 3 },
-    { soal: "2+3:", jawab: 5 },
+    { soal: "1 + 1 x 0:", jawab: 1 },
+    { soal: "17x3:", jawab: 51 },
+    { soal: "23x6:", jawab: 138 },
+    { soal: "53+16:", jawab: 69 },
+    { soal: "31+63:", jawab: 94 },
+    { soal: "5x16:", jawab: 80 },
+    { soal: "97+13:", jawab: 110 },
+    { soal: "15x4:", jawab: 60 },
+    { soal: "96+72:", jawab: 168 },
+    { soal: "56+16:", jawab: 72 },
+    { soal: "41+63:", jawab: 104 },
+    { soal: "15x3:", jawab: 45 },
+    { soal: "56+13:", jawab: 69 },
   ];
 
   if (kesulitan == 1) {
@@ -104,8 +111,13 @@ function generateQuestion(kesulitan) {
     return questions2[index];
   }
   if (kesulitan == 3) {
-    let index = Math.floor(Math.random() * questions3.length);
-    return questions3[index];
+    let obj = {};
+    let a = Math.ceil(Math.random() * 10);
+    let b = Math.ceil(Math.random() * 20);
+    let jawab = a + b;
+    obj.soal = `${a}+${b}:`;
+    obj.jawab = jawab;
+    return obj;
   }
 }
 //question = { soal: "14+1:", jawab: 15 }
