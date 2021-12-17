@@ -17,51 +17,31 @@
     </head>
     <body>
 
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
       <!--Content-->
-      <div class="modal-content text-center">
+      <div class="modal-content text-center modContainer">
         <!--Header-->
         <div class="modal-header d-flex justify-content-center">
-          <p class="heading" id = "modal-dialogue">ANDA KALAH</p>
+          <h1 class="heading" id = "modal-dialogue">ANDA KALAH</h1>
         </div>
 
         <!--Body-->
-        <div class="modal-body">
-
-          <i class="fas fa-times fa-4x animated rotateIn"></i>
-
-        </div>
+        
 
         <!--Footer-->
-        <div class="modal-footer flex-center">
-          <a href="" class="btn">Coba lagi</a>
-          <a href="login.html" type="button" class="btn" data-dismiss="modal">Menyerah</a>
+        <!-- <input class="modal-footer flex-center"> -->
+          <!-- <a href="" class="btn">Coba lagi</a> -->
+          <!-- <a href="login.html" type="button" class="btn" data-dismiss="modal">Menyerah</a> -->
+          
+          <button class="modbtn" type="button" id="coba-lagi" onclick="location.href='';"> Coba Lagi </button>
+          <button class="modbtn" type="button" id="menyerah" onclick="location.href='login.html';"> Menyerah </button>
         </div>
       </div>
       <!--/.Content-->
     </div>
   </div>
-  <!-- Selesai Modal Mas Rizal -->
 
   <div class="container">
     <h1>
