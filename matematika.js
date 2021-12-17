@@ -58,7 +58,7 @@ function generateQuestion(kesulitan) {
     },
     {
       soal: "6 , 7 , 8 , 10 , 12 , 15 , 18 , 22 , .... ",
-      jawab: 24,
+      jawab: 26,
     },
     {
       soal: "4, 12, 28, 60, 124, 252, … ",

@@ -1,34 +1,35 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="mainpagee.css" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      />
-      
-      <title>Mini Game Matematika</title>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="mainpagee.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    
+    <title>Mini Game Matematika</title>
+  </head>
+  <body>
 
-      <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content text-center modContainer">
-        <!--Header-->
-        <div class="modal-header d-flex justify-content-center">
-          <h1 class="heading" id = "modal-dialogue">ANDA KALAH</h1>
-        </div>
+    <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center modContainer">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <h1 class="heading" id = "modal-dialogue">ANDA KALAH</h1>
+      </div>
 
-        <!--Body-->
-        
+      <!--Body-->
+      
+
 
         <!--Footer-->
         <!-- <input class="modal-footer flex-center"> -->
@@ -38,26 +39,24 @@
           <button class="modbtn" type="button" id="coba-lagi" onclick="location.href='';"> Coba Lagi </button>
           <button class="modbtn" type="button" id="menyerah" onclick="location.href='./index.html';"> Menyerah </button>
         </div>
-      </div>
-      <!--/.Content-->
-    </div>
-  </div>
 
-  <div class="container">
-    <h1>
-      WOI <span id="username"></span>! SELAMAT MENGERJAKAN YA!
-    </h1>
-    <h5>HIGHSCORE <span id="highSpan"></span> BY <span id="highUser"></span> </h5>
-    <div class='anakContainer'>
-      <div class="life">
-        <span id="life"></span>
-      </div>
-      <div class="score">
-        <span id="score">0</span>
       </div>
     </div>
-    <div class="soal">
-      <span id="soal"></span>
+    <!--/.Content-->
+  </div>
+</div>
+
+<div class="container">
+  <h1>
+    WOI <span id="username"></span>! SELAMAT MENGERJAKAN YA!
+  </h1>
+  <h5>HIGHSCORE <span id="highSpan"></span> BY <span id="highUser"></span> </h5>
+  <div class='anakContainer'>
+    <div class="life">
+      <span id="life"></span>
+    </div>
+    <div class="score">
+      <span id="score">0</span>
     </div>
     <form onsubmit="menjawab(event)">
       <input id="user-answer" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user-answer" type="text" placeholder="Input Jawabanmu disini (dalam angka)" name="jawaban" required> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="btnSub">Submit</button>
@@ -68,9 +67,12 @@
     <form method="get" action="./index.html">
       <button id="btnKeluar" type="submit">Keluar</button>
     </form>
-    
 
-   
+  <form method="get" action="./login.html">
+    <button id="btnKeluar" type="submit">Keluar</button>
+  </form>
+  
+
 
     
   </div>;
