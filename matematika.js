@@ -58,7 +58,7 @@ function generateQuestion(kesulitan) {
     },
     {
       soal: "6 , 7 , 8 , 10 , 12 , 15 , 18 , 22 , .... ",
-      jawab: 24,
+      jawab: 26,
     },
     {
       soal: "4, 12, 28, 60, 124, 252, … ",
@@ -248,8 +248,10 @@ function menjawab(e) {
         life--;
         document.querySelector("#user-answer").disabled = true;
         document.querySelector("#btnSub").disabled = true;
-        if(score >= 100) {
+        if(score >= 100 && kesulitan == 1) {
           dialogue.innerText = `SELAMAT Anda sangat cerdas! skor Anda ${score}`;
+        } else if(score >= 100) {
+          dialogue.innerText = `SELAMAT skor Anda ${score} !! Tingkatkan tantanganmu!!`;
         } else if (score > 70) {
           dialogue.innerText = `NICE, Skor Anda ${score}`;
         } else {

@@ -30,6 +30,7 @@
       <!--Body-->
       
 
+
       <!--Footer-->
       <!-- <input class="modal-footer flex-center"> -->
         <!-- <a href="" class="btn">Coba lagi</a> -->
@@ -37,6 +38,11 @@
         
         <button class="modbtn" type="button" id="coba-lagi" onclick="location.href='';"> Coba Lagi </button>
         <button class="modbtn" type="button" id="menyerah" onclick="location.href='index.html';"> Menyerah </button>
+
+
+      
+
+
       </div>
     </div>
     <!--/.Content-->
@@ -55,25 +61,21 @@
     <div class="score">
       <span id="score">0</span>
     </div>
-  </div>
-  <div class="soal">
-    <span id="soal"></span>
-  </div>
-  <form onsubmit="menjawab(event)">
-    <input id="user-answer" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user-answer" type="text" placeholder="Input Jawabanmu disini (dalam angka)" name="jawaban"> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="btnSub">Submit</button>
-    
-    </form>
-  <button class="btnReset" onclick="reset()">Reset</button>
+    <form onsubmit="menjawab(event)">
+      <input id="user-answer" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user-answer" type="text" placeholder="Input Jawabanmu disini (dalam angka)" name="jawaban" required> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="btnSub">Submit</button>
+      
+      </form>
+    <button class="btnReset" onclick="reset()">Reset</button>
 
   <form method="get" action="./index.html">
     <button id="btnKeluar" type="submit">Keluar</button>
   </form>
-  
-
- 
 
   
-</div>;
-  </body>
-  <script src="./matematika.js"></script>
-</html>
+
+
+    
+  </div>;
+    </body>
+    <script src="./matematika.js"></script>
+  </html>
