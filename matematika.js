@@ -82,11 +82,11 @@ function generateQuestion(kesulitan) {
     },
   ];
   const questions2 = [
-    { soal: "14+1:", jawab: 15 },
-    { soal: "14+21:", jawab: 35 },
-    { soal: "24+26:", jawab: 50 },
-    { soal: "41+45:", jawab: 86 },
-    { soal: "14+17:", jawab: 31 },
+    { soal: "14+61:", jawab: 75 },
+    { soal: "114+201:", jawab: 315 },
+    { soal: "124+26:", jawab: 150 },
+    { soal: "41+245:", jawab: 286 },
+    { soal: "214+117:", jawab: 331 },
     { soal: "1 + 1 x 0:", jawab: 1 },
     { soal: "17x3:", jawab: 51 },
     { soal: "23x6:", jawab: 138 },
@@ -122,11 +122,15 @@ function generateQuestion(kesulitan) {
 }
 //question = { soal: "14+1:", jawab: 15 }
 //jawab = angka
+let highScore = 0;
 let question = generateQuestion(kesulitan);
 let life = 3;
 let username = sessionStorage.getItem("username");
 let divLife = document.getElementById("life");
 let anakLife = document.createElement("i");
+let highSpan = document.getElementById("highSpan");
+let highUser = document.getElementById("highUser");
+
 function lifeCount(life) {
   if (life === 0) {
     return life;
@@ -139,6 +143,33 @@ function lifeCount(life) {
 }
 
 anakLife.innerText = lifeCount(life);
+
+if (
+  sessionStorage.getItem("highScore1") &&
+  sessionStorage.getItem("highUser1") &&
+  kesulitan == 1
+) {
+  highSpan.innerText = sessionStorage.getItem("highScore1");
+  highUser.innerText = sessionStorage.getItem("highScore1");
+} else if (
+  sessionStorage.getItem("highScore2") &&
+  sessionStorage.getItem("highUser2") &&
+  kesulitan == 2
+) {
+  highSpan.innerText = sessionStorage.getItem("highScore2");
+  highUser.innerText = sessionStorage.getItem("highUser2");
+} else if (
+  sessionStorage.getItem("highScore3") &&
+  sessionStorage.getItem("highUser3") &&
+  kesulitan == 3
+) {
+  highSpan.innerText = sessionStorage.getItem("highScore3");
+  highUser.innerText = sessionStorage.getItem("highUser3");
+} else {
+  highSpan.innerText = 0;
+  highUser.innerText = "Unknown";
+}
+
 anakLife.className = "material-icons";
 let temp = anakLife.cloneNode(true);
 divLife.appendChild(anakLife);
@@ -196,6 +227,23 @@ function menjawab(e) {
         }
         
         modal.style.display = "block";
+        if (score > highScore) {
+          if (kesulitan == 1) {
+            sessionStorage.setItem("highScore1", score);
+            sessionStorage.setItem("highUser1", username);
+            highScore = score;
+          }
+          if (kesulitan == 2) {
+            sessionStorage.setItem("highScore2", score);
+            sessionStorage.setItem("highUser2", username);
+            highScore = score;
+          }
+          if (kesulitan == 3) {
+            sessionStorage.setItem("highScore3", score);
+            sessionStorage.setItem("highUser3", username);
+            highScore = score;
+          }
+        }
       }
     }
     document.getElementById("life").innerText = lifeCount(life);
