@@ -1,0 +1,93 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="mainpagee.css" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
+      
+      <title>Mini Game Matematika</title>
+    </head>
+    <body>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+      <!--Content-->
+      <div class="modal-content text-center">
+        <!--Header-->
+        <div class="modal-header d-flex justify-content-center">
+          <p class="heading" id = "modal-dialogue">ANDA KALAH</p>
+        </div>
+
+        <!--Body-->
+        <div class="modal-body">
+
+          <i class="fas fa-times fa-4x animated rotateIn"></i>
+
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer flex-center">
+          <a href="" class="btn">Coba lagi</a>
+          <a href="login.html" type="button" class="btn" data-dismiss="modal">Menyerah</a>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!-- Selesai Modal Mas Rizal -->
+
+  <div class="container">
+    <h1>
+      WOI <span id="username"></span>! SELAMAT MENGERJAKAN YA!
+    </h1>
+    <div class='anakContainer'>
+      <div class="life">
+        LIFE = <span id="life"></span>
+      </div>
+      <div class="score">
+        SCORE = <span id="score">0</span>
+      </div>
+    </div>
+    <div class="soal">
+      <span id="soal"></span>
+    </div>
+    <form onsubmit="menjawab(event)">
+      <input id="user-answer" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user-answer" type="text" placeholder="Input Jawabanmu disini (dalam angka)" name="jawaban">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="btnSub">Submit</button> 
+    </form>
+    
+    <button class="btnReset" onclick="reset()">Reset</button>
+    <form method="get" action="./login.html">
+      <button id="btnKeluar" type="submit">Keluar</button>
+    </form>
+  </div>;
+    </body>
+    <script src="./matematika.js"></script>
+  </html>

@@ -1,0 +1,83 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-position: center;
+  background-image: url("bgLanding1.jpg");
+  background-size: 2050px;
+}
+
+ .head-title{
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Redacted Script', cursive;
+  color: #f4b942
+}
+
+.style1 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.157) 0.39;
+}
+
+.container {
+  background-color: rgba(63, 62, 62, 0.726);
+  text-align: center;
+  width: 450px;
+  height: 500x;
+  border-radius: 10px;
+  padding: 20px 80px;
+}
+
+.usernameBlock{
+  text-align: center;
+  width : 95%;
+  
+}
+
+.form-row{
+  text-align: center
+}
+
+.btnStart{
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border-radius: 15px;
+  background: none;
+  color:#ffa260;
+  border: 2px solid;
+  padding: 1em 2em;
+  font-size: 1em;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,transform 0.25s;
+  transition: 0.1s;
+}
+
+.btnStart:hover {
+  border-color: #f1ff5c;
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+  background-color: #204121
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  
+  box-sizing: border-box;
+}
+
+
