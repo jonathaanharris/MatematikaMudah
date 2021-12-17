@@ -60,6 +60,26 @@ function generateQuestion() {
       soal: "987 + 113 - 1000 +50?",
       jawab: 150,
     },
+    {
+      soal: "6 , 7 , 8 , 10 , 12 , 15 , 18 , 22 , .... ",
+      jawab: 24,
+    },
+    {
+      soal: "4, 12, 28, 60, 124, 252, … ",
+      jawab: 508,
+    },
+    {
+      soal: "Sebuah bejana berbentuk silinder berisi air 1/3 ya. Jika kemudian ditambah air sebanyak 3 liter lagi, bejana ini akan berisi kira-kira ½ nya. Berapa literkah kapasitas bejana itu? ",
+      jawab: 18,
+    },
+    {
+      soal: "Berapa umur nenek 10 tahun ke depan, apabila 3 tahun yang lalu umurnya 60 tahun?",
+      jawab: 73,
+    },
+    {
+      soal: "28 adalah berapa persen(%) dari 70",
+      jawab: 40,
+    },
   ];
   let index = Math.floor(Math.random() * questions.length);
   return questions[index];
