@@ -2,7 +2,7 @@ if (
   !sessionStorage.getItem("valueLevel") ||
   !sessionStorage.getItem("username")
 ) {
-  window.location.href = "./login.html";
+  window.location.href = "./index.html";
 }
 let kesulitan = sessionStorage.getItem("valueLevel");
 function generateQuestion(kesulitan) {
